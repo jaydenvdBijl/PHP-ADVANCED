@@ -20,14 +20,19 @@
         <input type="text" id="sport" name="sport" value=""><br><br>
         <label for="name">lievelingseten</label>
         <input type="text" id="lievelingseten" name="lievelingseten" value=""><br><br> 
-        <select name="kleur" id="kleur">
-        <option value="red">red</option>
-        <option value="blue">blue</option>
-        <option value="green">green</option>
-        <option value="black">black</option>
-        <option value="brown">brown</option>
+        <label for="name">border dikte</label>
+        <input type="nummer" id="border_dikte" name="border_dikte" value=""><br><br> 
+
+    <select name="background_color">
+        <?php
+            $background_color = array("red", "blue", "green", "black", "brown");
+            foreach ($background_color AS $color){
+            echo "<option value=$color>$color</option>";
+            }
+        ?>
     </select>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit">    
 </form>
 </body>
 </html>
+

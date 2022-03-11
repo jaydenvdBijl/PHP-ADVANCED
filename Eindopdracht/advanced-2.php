@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color: <?php echo $_POST["kleur"] ?>">
-    
+<body style="background-color: <?php echo $_POST["background_color"]; ?>">
+<table style="border: <?php echo $_POST["border_dikte"]?>px solid black;">
+        <tr>
+    <th>naam</th>
+    <th>leeftijd</th>
+    <th>muzieksmaak</th>
+    <th>woonplaats</th>
+    <th>sport</th>
+    <th>lievelingseten</th>
+  </tr> 
+    <?php
+echo "<td>".$_POST['name'] . "</td>";
+echo "<td>".$_POST['leeftijd'] . "</td>";
+echo "<td>".$_POST['muzieksmaak'] . "</td>";
+echo "<td>".$_POST['woonplaats'] . "</td>";
+echo "<td>".$_POST['sport'] . "</td>";
+echo "<td>".$_POST['lievelingseten'] . "</td>";
+
+
+?>
+  </tr>
+</table>
 </body>
 </html>
-<?php
-echo "naam: ".$_POST['name'] . "<br>";
-echo "leeftijd: ".$_POST['leeftijd'] . "<br>";
-echo "muzieksmaak: ".$_POST['muzieksmaak'] . "<br>";
-echo "woonplaats: ".$_POST['woonplaats'] . "<br>";
-echo "sport: ".$_POST['sport'] . "<br>";
-echo "lievelingseten: ".$_POST['lievelingseten'] . "<br>";
-?>
